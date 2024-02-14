@@ -38,7 +38,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Jangan kirimkan saya pesan!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(DEVS)
+#ADMINS.append(DEVS)
 
 LOG_FILE_NAME = "geezfsub.txt"
 
