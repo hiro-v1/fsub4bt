@@ -45,6 +45,10 @@
       "description": "id group/channel untuk target fsub",
       "value": "0"
     },
+    "FORCE_SUB_CHANNEL3":{
+      "description": "id group/channel untuk target fsub",
+      "value": "0"
+    },
     "START_MESSAGE": {
       "description": "Optional: pesan start untuk bot anda",
       "value": "Hallo {first}\n\nsaya bisa menyimpan file dan membagikan dengan mudah."
