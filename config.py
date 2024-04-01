@@ -1,7 +1,7 @@
+import sys
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-from geezlibs import DEVS
 
 
 from dotenv import load_dotenv
@@ -34,12 +34,15 @@ if os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True':
     DISABLE_CHANNEL_BUTTON = True
 else:
     DISABLE_CHANNEL_BUTTON = False
-
+try:
+    import geezlibs
+except ModuleNotFoundError:
+    print("GeezLibs not installed, you are gay")
+    sys.exit()
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Jangan kirimkan saya pesan!"
 
 ADMINS.append(OWNER_ID)
-#ADMINS.append(DEVS)
 
 LOG_FILE_NAME = "geezfsub.txt"
 
