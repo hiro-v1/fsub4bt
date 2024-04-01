@@ -61,16 +61,6 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL2, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL2}")
                 self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
                 sys.exit()
-        try:
-            db_channel = await self.get_chat(CHANNEL_ID)
-            self.db_channel = db_channel
-            test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
-            await test.delete()
-        except Exception as e:
-            self.LOGGER(__name__).warning(e)
-            self.LOGGER(__name__).warning(f"Pastikan bot telah menjadi admin di Channel Database - {CHANNEL_ID}")
-            self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
-            sys.exit()
         if FORCE_SUB_CHANNEL3:
             try:
                 link = (await self.get_chat(FORCE_SUB_CHANNEL3)).invite_link
