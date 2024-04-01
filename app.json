@@ -21,7 +21,7 @@
       "description": "app id dari my.telegram.org",
       "value": ""
     },
-    "DATABASE_URL": {
+    "DB_URI": {
       "description": "mongo db url",
       "value": "url"
     },
