@@ -95,7 +95,7 @@ Report Bugs, Give Feature Requests There..
 ### Credits
 - Original repo [CodeXbotz](https://github.com/CodeXBotz/File-Sharing-Bot)
 - Thanks To Dan For His Awsome [Libary](https://github.com/pyrogram/pyrogram)
-- Our Support Group Members [Geez](https://t.me/GeezRam)
+- Our Support Group Members [GeezRam](https://t.me/GeezRam)
 
 ### Licence
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
