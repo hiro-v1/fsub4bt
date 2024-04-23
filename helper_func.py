@@ -3,7 +3,7 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNEL, ADMINS, FORCE_SUB_CHANNEL2, FORCE_SUB_CHANNEL3
+from config import FORCE_SUB_CHANNEL, ADMINS, FORCE_SUB_CHANNEL2, FORCE_SUB_CHANNEL3, FORCE_SUB_CHANNEL4
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 
@@ -12,17 +12,19 @@ async def is_subscribed(filter, client, update):
     if user_id in ADMINS:
         return True
     
-    if not FORCE_SUB_CHANNEL or not FORCE_SUB_CHANNEL2 or not FORCE_SUB_CHANNEL3:
+    if not FORCE_SUB_CHANNEL or not FORCE_SUB_CHANNEL2 or not FORCE_SUB_CHANNEL3 or not FORCE_SUB_CHANNEL4:
         return False
     
     try:
         member1 = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
         member2 = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
         member3 = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL3, user_id=user_id)
+        member4 = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL4, user_id=user_id)
         
         if (member1.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]
             and member2.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]
-            and member3.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]):
+            and member3.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]
+            and member4.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]):
             return True
     except UserNotParticipant:
         pass

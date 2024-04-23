@@ -9,7 +9,7 @@ from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT, FORCE_SUB_CHANNEL2, FORCE_SUB_CHANNEL3
+from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT, FORCE_SUB_CHANNEL2, FORCE_SUB_CHANNEL3, FORCE_SUB_CHANNEL4
 
 
 name ="""BOT FSUB
@@ -71,7 +71,20 @@ class Bot(Client):
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot tidak dapat mengambil link group atau channel target fsub!")
-                self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL2, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL2}")
+                self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL3, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL3}")
+                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
+                sys.exit()
+        if FORCE_SUB_CHANNEL4:
+            try:
+                link = (await self.get_chat(FORCE_SUB_CHANNEL4)).invite_link
+                if not link:
+                    await self.export_chat_invite_link(FORCE_SUB_CHANNEL4)
+                    link = (await self.get_chat(FORCE_SUB_CHANNEL4)).invite_link
+                self.invitelink3 = link
+            except Exception as a:
+                self.LOGGER(__name__).warning(a)
+                self.LOGGER(__name__).warning("Bot tidak dapat mengambil link group atau channel target fsub!")
+                self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL4, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL4}")
                 self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
                 sys.exit()
         try:
