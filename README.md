@@ -15,13 +15,13 @@ Original Repo - https://github.com/CodeXBotz/File-Sharing-Bot
 ##
 ### Installation
 #### Deploy on Heroku<br>
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hitokizzy/fsub_4button)</br>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Rehansaputradewantoro/fsub_4button)</br>
 
 
 
 #### Deploy in your VPS
 ````bash
-git clone https://github.com/hitokizzy/fsub_4button
+git clone https://github.com/Rehansaputradewantoro/fsub_4button
 cd fsub_4button
 pip3 install -r requirements.txt
 cp sample_config.env config.env
