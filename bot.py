@@ -46,7 +46,7 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot tidak dapat mengambil link group atau channel target fsub!")
                 self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL}")
-                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
+                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/mogenall untuk Bantuan")
                 sys.exit()
         if FORCE_SUB_CHANNEL2:
             try:
@@ -59,7 +59,7 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot tidak dapat mengambil link group atau channel target fsub!")
                 self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL2, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL2}")
-                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
+                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/mogenall untuk Bantuan")
                 sys.exit()
         if FORCE_SUB_CHANNEL3:
             try:
@@ -72,7 +72,7 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot tidak dapat mengambil link group atau channel target fsub!")
                 self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL3, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL3}")
-                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
+                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/mogenall untuk Bantuan")
                 sys.exit()
         if FORCE_SUB_CHANNEL4:
             try:
@@ -85,7 +85,7 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot tidak dapat mengambil link group atau channel target fsub!")
                 self.LOGGER(__name__).warning(f"Pastikan bot adalah admin di FORCE_SUB_CHANNEL4, ID Fsub target Channel/Group: {FORCE_SUB_CHANNEL4}")
-                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
+                self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/mogenall untuk Bantuan")
                 sys.exit()
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
@@ -95,11 +95,11 @@ class Bot(Client):
         except Exception as e:
             self.LOGGER(__name__).warning(e)
             self.LOGGER(__name__).warning(f"Pastikan bot telah menjadi admin di Channel Database - {CHANNEL_ID}")
-            self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/GeezRam untuk Bantuan")
+            self.LOGGER(__name__).info("\nBot Berhenti. Join https://t.me/mogenall untuk Bantuan")
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"Bot Running..!\n\nRe-Coded by @Fakedevss\nhttps://t.me/GeezRam")
+        self.LOGGER(__name__).info(f"Bot Running..!\n\nRe-Coded by @hiro_v1\nhttps://t.me/hiro_v1")
         self.LOGGER(__name__).info(f"""Bot Online  """)
         self.username = usr_bot_me.username
         #web-response
