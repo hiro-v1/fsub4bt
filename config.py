@@ -21,7 +21,7 @@ FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
 FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "0"))
 FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
-START_MSG = os.environ.get("START_MESSAGE", "Hallo {first}\n\nsaya bisa menyimpan file dan membagikan dengan mudah.")
+START_MSG = os.environ.get("START_MESSAGE", "Hallo {first}\n\nsaya bisa menyimpan file dan membagikan dengan mudah info @hiro_v1.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
